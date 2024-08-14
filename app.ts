@@ -19,47 +19,47 @@ function add(a:number,b:number): number{   // aကို number ပေးတယ�
     // number နဲံထွက်မယ့်ဟာကို string or other data type နဲံ ထုတ်လို့မရ
     return a + b;
 }
-console.log(add(200,44));
+//console.log(add(200,44));
 
 
 function hi():void{
-    console.log('hello TS')    //void type ကို return ပေးပြီးပြန်ထုတ်လို့မရပါ only console.log() နဲ့သာထုတ်လို့ရတယ်
+    //console.log('hello TS')    //void type ကို return ပေးပြီးပြန်ထုတ်လို့မရပါ only console.log() နဲ့သာထုတ်လို့ရတယ်
 }
 hi();
 
 // ! NOT operator 
 const pending : boolean = true;
 const notPending =!pending; //false
-console.log(notPending); //false
-console.log(pending);
+//console.log(notPending); //false
+//console.log(pending);
 
-const hasError : boolean = false;
-const completed : boolean = true;
+//const hasError : boolean = false;
+//const completed : boolean = true;
 
 // ! AND operator 
-let result = completed && hasError;
-console.log(result); //false
+//let result = completed && hasError;
+//console.log(result); //false
 
 // ! OR operator 
-result = completed || hasError;
-console.log(result);
+//result = completed || hasError;
+//console.log(result);
 // ! Difinition an enum
     // You can define an enum using the enum keyword followed by the name of the enum and the
     // list of values. Each value in and enum is assigned a numeric value, starting frum 0 by default.
     // ** ကိုယ်နှစ်သက်တဲ့ နံပါတ်တွေကိုတော့ပေးလို့ရတယ် ဒါပေမယ့် default အနေနဲ့ဆိုရင်တော့ 0 ကနေပဲပေးတယ်
-enum Direction {
+enum Direction{
     Up = 100,     //0  ကိုယ်ပေးချင်တဲ့ကိန်းဏာန်းကနေစပေးလို့ရတယ်
     Down,         //1
     Left,         //2
     Right,        //3
 };
-console.log(Direction.Up);
-console.log(Direction.Down);
-console.log(Direction.Right);
-console.log(Direction.Left);
+//console.log(Direction.Up);
+//console.log(Direction.Down);
+//console.log(Direction.Right);
+//console.log(Direction.Left);
 
 let move : Direction = Direction.Left;
-console.log("left =>",move);
+//console.log("left =>",move);
 
 enum Day{
     Sunday,
@@ -75,10 +75,10 @@ function isItWeekDay(day: Day) : boolean {  // console ကို boolean နဲ�
     return day >=Day.Monday && day <= Day.Friday;
 };
 let mon : Day = Day.Monday;
-console.log(isItWeekDay(mon));
+//console.log(isItWeekDay(mon));
 
 let sun : Day = Day.Sunday;
-console.log(isItWeekDay(sun));
+//console.log(isItWeekDay(sun));
 
 // ** switch & case နဲ့စမ်းသပ်ခြင်း
 //ကြားရက်ကိုစစ်ခြင်း
@@ -97,10 +97,10 @@ function isWeekday(day: Day) : boolean{
 }
 
 let toDay = Day.Monday;
-console.log(isWeekday(toDay));
+//console.log(isWeekday(toDay));
 
 let today = Day.Sunday;
-console.log('isWeekday(today) :>> ', isWeekday(today));
+//console.log('isWeekday(today) :>> ', isWeekday(today));
 
 // weekend ကိုစစ်ခြင်း
 function isWeekend(day: Day) : string | boolean {   // string or boolean နှစ်ခုတည်းက ကြိုက်တာနဲ့ပေးလို့ရတယ်
@@ -117,8 +117,8 @@ function isWeekend(day: Day) : string | boolean {   // string or boolean နှ�
     return isweek ? "Go to PlayGround" : "Go to school";
 }
 
-console.log('isWeekend(Day.Monday) :>> ', isWeekend(Day.Monday));
-console.log('isWeekend(Day.Sunday) :>> ', isWeekend(Day.Sunday));
+//console.log('isWeekend(Day.Monday) :>> ', isWeekend(Day.Monday));
+//console.log('isWeekend(Day.Sunday) :>> ', isWeekend(Day.Sunday));
 
 //Data Type
 // ! ကိုယ်ရေးချင်တာကို data type အရင်သတ်မှတ်ပေးခြင်းဖြင့် error တွေကို ရှောင်ရှားနိုင်တယ်
@@ -163,8 +163,8 @@ let user2 : UserType ={
         state : "Yangon",
     },
 };
-console.log('user1 :>> ', user1);
-console.log('user2 :>> ', user2);
+//console.log('user1 :>> ', user1);
+//console.log('user2 :>> ', user2);
 
 //interface 
 // ! interface ကို OOP တွေမှာ အသုံးများတယ်
@@ -180,7 +180,7 @@ let maungMaung : student ={
     age : 23,
     studentId : 1,
 }
-console.log('maungMaung :>> ', maungMaung);
+//console.log('maungMaung :>> ', maungMaung);
 
 interface employee extends UserInterface  {
     employeeId : number,
@@ -191,7 +191,7 @@ let koko: employee ={
     age :25,
     employeeId : 1001,
 };
-console.log('koko :>> ', koko);
+//console.log('koko :>> ', koko);
 
 interface userinterface2{
     userId : number;
@@ -205,12 +205,12 @@ let maung : userinterface2 ={
     userId : 2,
     userName : 'maung'
 };
-console.log('maung :>> ', maung);
+//console.log('maung :>> ', maung);
 let cat : categoryInterface ={
     catId : 2002,
     categoryName : 'Phone',
 };
-console.log('cat :>> ', cat);
+//console.log('cat :>> ', cat);
 
 interface PostInterface {
     id : number;
@@ -224,17 +224,46 @@ let post : PostInterface={
     description : "world",
     extra: [{userId:2,userName:"maung"}]
 };
-console.log('post :>> ', post);
+//console.log('post :>> ', post);
+
+interface person {
+    id : number;
+    name : string;
+    age : number;
+    job? : string; //option
+}
+let pyaesone : person ={
+    id : 1,
+    name : 'pyae sone htun',
+    age : 25,
+    job : 'programmer',
+}
+//console.log('pyaesone :>> ', pyaesone);
+interface Greek {
+    (name : string) : string;
+}
+let greek : Greek =function(name: string){
+    return `My name is ${name}`;
+}
+//console.log(greek('pyae sone htun'));
+// index type in interface
+interface StringArray{
+    [index : number]: string;
+}
+let arr : StringArray =['bobo','koko'];
+let firstArr :string = arr[1];
+//console.log('arr[1] :>> ', arr[1]);
+//console.log('firstArr :>> ', firstArr);
 // !generic
-//generic  ထပ်ခါထပ်ခါသုံးချင်တယ်ဆိုရင် သုံးတယ်
+//generic  ထပ်ခါထပ်ခါသုံးချင်တယ်ဆိုရင် သုံးတယ် 
 //repeat ဖြစ်မယ့် code တွေကိုသုံးတယ်
  function hello <T>(a:T):T{
     console.log(a);
     return a;
  }
- hello('boob');
- hello(233);
- hello(false);
+//  hello('boob');
+//  hello(233);
+//  hello(false);
 
  interface IForm<T>{
     name: string;
@@ -248,12 +277,12 @@ console.log('post :>> ', post);
     password: "09form",
     extra:["nono","rose","jame"]
  };
- console.log('registerForm :>> ', registerForm);
- 
+ //console.log('registerForm :>> ', registerForm);
+
  let loginForm: IForm<number>={
     name: 'einzali',
     email:'einzali@gmail.com',
     password:"01form",
     extra :[10,34,55],
  }
- console.log('loginForm :>> ', loginForm);
+ //console.log('loginForm :>> ', loginForm);

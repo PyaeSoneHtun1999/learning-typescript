@@ -17,24 +17,24 @@ function add(a, b) {
     // number နဲံထွက်မယ့်ဟာကို string or other data type နဲံ ထုတ်လို့မရ
     return a + b;
 }
-console.log(add(200, 44));
+//console.log(add(200,44));
 function hi() {
-    console.log('hello TS'); //void type ကို return ပေးပြီးပြန်ထုတ်လို့မရပါ only console.log() နဲ့သာထုတ်လို့ရတယ်
+    //console.log('hello TS')    //void type ကို return ပေးပြီးပြန်ထုတ်လို့မရပါ only console.log() နဲ့သာထုတ်လို့ရတယ်
 }
 hi();
 // ! NOT operator 
 var pending = true;
 var notPending = !pending; //false
-console.log(notPending); //false
-console.log(pending);
-var hasError = false;
-var completed = true;
+//console.log(notPending); //false
+//console.log(pending);
+//const hasError : boolean = false;
+//const completed : boolean = true;
 // ! AND operator 
-var result = completed && hasError;
-console.log(result); //false
+//let result = completed && hasError;
+//console.log(result); //false
 // ! OR operator 
-result = completed || hasError;
-console.log(result);
+//result = completed || hasError;
+//console.log(result);
 // ! Difinition an enum
 // You can define an enum using the enum keyword followed by the name of the enum and the
 // list of values. Each value in and enum is assigned a numeric value, starting frum 0 by default.
@@ -47,12 +47,12 @@ var Direction;
     Direction[Direction["Right"] = 103] = "Right";
 })(Direction || (Direction = {}));
 ;
-console.log(Direction.Up);
-console.log(Direction.Down);
-console.log(Direction.Right);
-console.log(Direction.Left);
+//console.log(Direction.Up);
+//console.log(Direction.Down);
+//console.log(Direction.Right);
+//console.log(Direction.Left);
 var move = Direction.Left;
-console.log("left =>", move);
+//console.log("left =>",move);
 var Day;
 (function (Day) {
     Day[Day["Sunday"] = 0] = "Sunday";
@@ -68,9 +68,9 @@ function isItWeekDay(day) {
 }
 ;
 var mon = Day.Monday;
-console.log(isItWeekDay(mon));
+//console.log(isItWeekDay(mon));
 var sun = Day.Sunday;
-console.log(isItWeekDay(sun));
+//console.log(isItWeekDay(sun));
 // ** switch & case နဲ့စမ်းသပ်ခြင်း
 //ကြားရက်ကိုစစ်ခြင်း
 function isWeekday(day) {
@@ -87,9 +87,9 @@ function isWeekday(day) {
     return isday;
 }
 var toDay = Day.Monday;
-console.log(isWeekday(toDay));
+//console.log(isWeekday(toDay));
 var today = Day.Sunday;
-console.log('isWeekday(today) :>> ', isWeekday(today));
+//console.log('isWeekday(today) :>> ', isWeekday(today));
 // weekend ကိုစစ်ခြင်း
 function isWeekend(day) {
     var isweek;
@@ -104,8 +104,6 @@ function isWeekend(day) {
     }
     return isweek ? "Go to PlayGround" : "Go to school";
 }
-console.log('isWeekend(Day.Monday) :>> ', isWeekend(Day.Monday));
-console.log('isWeekend(Day.Sunday) :>> ', isWeekend(Day.Sunday));
 var user1 = {
     name: 'pyae sone',
     age: 22,
@@ -131,58 +129,62 @@ var user2 = {
         state: "Yangon",
     },
 };
-console.log('user1 :>> ', user1);
-console.log('user2 :>> ', user2);
 var maungMaung = {
     userName: "maung maung",
     age: 23,
     studentId: 1,
 };
-console.log('maungMaung :>> ', maungMaung);
 var koko = {
     userName: 'koko',
     age: 25,
     employeeId: 1001,
 };
-console.log('koko :>> ', koko);
 var maung = {
     userId: 2,
     userName: 'maung'
 };
-console.log('maung :>> ', maung);
+//console.log('maung :>> ', maung);
 var cat = {
     catId: 2002,
     categoryName: 'Phone',
 };
-console.log('cat :>> ', cat);
 var post = {
     id: 3,
     title: "Hello",
     description: "world",
     extra: [{ userId: 2, userName: "maung" }]
 };
-console.log('post :>> ', post);
+var pyaesone = {
+    id: 1,
+    name: 'pyae sone htun',
+    age: 25,
+    job: 'programmer',
+};
+var greek = function (name) {
+    return "My name is ".concat(name);
+};
+var arr = ['bobo', 'koko'];
+var firstArr = arr[1];
+//console.log('arr[1] :>> ', arr[1]);
+//console.log('firstArr :>> ', firstArr);
 // !generic
-//generic  ထပ်ခါထပ်ခါသုံးချင်တယ်ဆိုရင် သုံးတယ်
+//generic  ထပ်ခါထပ်ခါသုံးချင်တယ်ဆိုရင် သုံးတယ် 
 //repeat ဖြစ်မယ့် code တွေကိုသုံးတယ်
 function hello(a) {
     console.log(a);
     return a;
 }
-hello('boob');
-hello(233);
-hello(false);
 var registerForm = {
     name: "pyae sone",
     email: "pyaesone@gmail.com",
     password: "09form",
     extra: ["nono", "rose", "jame"]
 };
-console.log('registerForm :>> ', registerForm);
+//console.log('registerForm :>> ', registerForm);
 var loginForm = {
     name: 'einzali',
     email: 'einzali@gmail.com',
     password: "01form",
     extra: [10, 34, 55],
 };
-console.log('loginForm :>> ', loginForm);
+//console.log('loginForm :>> ', loginForm);
